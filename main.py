@@ -1,10 +1,13 @@
 from pprint import pprint
+import file_manager
+
 
 def buid_dictionary(list):  # Метод для постройки словаря
     rate = ['ingredient_name', 'quantity', 'measure']
     lst1 = list.split('|')
-    myDict = {rate[i]: lst1[i] for i in range(0, len(rate), 1)}
-    return myDict
+    my_dict = {rate[i]: lst1[i] for i in range(0, len(rate), 1)}
+    return my_dict
+
 
 def get_book_cook():
     book_cook = {}
@@ -43,6 +46,7 @@ def get_book_cook():
 
     return book_cook
 
+
 def get_shop_list_by_dishes(dishes, person_count):
     cook_book = get_book_cook()
 
@@ -64,4 +68,8 @@ def get_shop_list_by_dishes(dishes, person_count):
 
     pprint(dict_result)
 
+
 get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2)
+
+# вызов задания 3
+file_manager.rewriting("3.txt", "C:/Users/user/PycharmProjects/pythonProject9", "files")
