@@ -1,12 +1,10 @@
 from pprint import pprint
 
-
 def buid_dictionary(list):  # Метод для постройки словаря
     rate = ['ingredient_name', 'quantity', 'measure']
     lst1 = list.split('|')
     myDict = {rate[i]: lst1[i] for i in range(0, len(rate), 1)}
     return myDict
-
 
 def get_book_cook():
     book_cook = {}
@@ -44,7 +42,6 @@ def get_book_cook():
     book_cook[key] = value
 
     return book_cook
-
 
 def get_shop_list_by_dishes(dishes, person_count):
     cook_book = get_book_cook()
